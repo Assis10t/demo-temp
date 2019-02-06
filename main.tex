@@ -26,11 +26,24 @@
 	\\ \hline
 	\vtop to 70mm{
 \begin{itemize}
-    \item B.O.B structure such that he can move.
+    \item B.O.B structured such that he can move.
     \item B.O.B will be able to move by following a line.
-    \item Server: Able to view orders, queue items needed to be collected and build a route and a set of commands for the robot to deliver each item to the bagging area. --- Mongo DB server connects to node express ... Connects to back-end. Basic functionality  - robot app connected to server. Zero conflict when connecting to server, IP changes accordingly. Server can make robot move with reqUEST FROM APP OR WEBSITE.
-    \item App: Able to read and display the available items in the warehouse; allow the clients to create individual accounts, select items and place orders.  Working prototype with the ability to place an order. --- Finds and Connects to server. Displays list of items, can place orders, robot moves, order placed.
-    \item Website: Able to add and update items in the warehouse. --- On and Off 
+    \item Server Prototype: 
+    \begin{itemize}
+        \item View order.
+        \item Select route.
+    \end{itemize}
+    \item App Prototype:
+    \begin{itemize}
+        \item Zero-cent bypass.
+        \item Authentication.
+        \item View order.
+    \end{itemize}
+    \item Website Prototype: 
+    \begin{itemize}
+        \item User authentication.
+        \item On and off switch for B.O.B.
+    \end{itemize}
 \end{itemize}
   }
   \\
@@ -46,11 +59,29 @@
 	\cellcolor{blue!25}\large
 	\textbf{Summarise how your group organised the workload to achieve your goals.}
 	\\ \hline
-	\vtop to 60mm{
+	\vtop to 75mm{
 	\begin{itemize}
-	    \item Jacob was assisted by Claire, Alex and Anna when constructing B.O.B sufficiently for line movement.
+	    \item Team Split
+	    \begin{itemize}
+	        \item Robot Hardware
+	        \item Robot Software
+	        \item Server, Website and App 
+	    \end{itemize}
+	    \item Robot Hardware
+	    \begin{itemize}
+	        \item Jacob modelled B.O.B
+	        \item Claire, Alex, and Anna, supported Jacob.
+	    \end{itemize}
 	    \item Robot Software
-	    \item The webby stuff
+	    \begin{itemize}
+	        \item Claire, Alex, Anna, and Kieran, implemented B.O.B's motion.
+	    \end{itemize}
+	    \item Server, Website and App 
+	    \begin{itemize}
+	        \item Freddie, Oktay and Zach implemented the server.
+	        \item Oktay and Freddie implemented the App.
+	        \item Harry and Oktay implemented the website.
+	    \end{itemize}
 	\end{itemize}
   }
   \\
@@ -65,11 +96,12 @@
 	\cellcolor{blue!25}\large
 	\textbf{What were your main achievements?}
 	\\ \hline
-	\vtop to 95mm{
+	\vtop to 25mm{
 	\begin{itemize}
 	    \item B.O.B follows a line. 
 	    \item B.O.B detects markers.
-	    \item 
+	    \item B.O.B software, website and app connects to server.
+	    \item Quick problem-solving when dropping Google FireBase.
 	\end{itemize}
   }
   \\
@@ -84,10 +116,10 @@
 	\cellcolor{blue!25}\large
 	\textbf{What did you not achieve? Briefly explain why.}
 	\\ \hline
-	\vtop to 95mm{
+	\vtop to 25mm{
 	\begin{itemize}
-	    \item Firebase set up for database because of wifi restrictions. Resorted to server, app and website functionality being handled locally.
-	    \item 
+	    \item Using Google Firebase for server implementation due of Wifi restrictions (no internet). Resorted to server implementation being handled locally. 
+	    \item Using Infrared sensors with Raspberry pi to follow a line. Resorted to using colour sensors with EV3 for more precision.
 	\end{itemize}
   }
   \\
@@ -102,10 +134,12 @@
 	\cellcolor{blue!25}\large
 	\textbf{Include any quantitative data you have collected (this can be a graph/table with a few words)}
 	\\ \hline
-	\vtop to 10mm{
-	\begin{itemize}
-	    \item To be added. Readings from colour sensors.
-	\end{itemize}
+	\vtop to 100mm{
+	\begin{figure}[!htb]
+    \minipage{0.05\colwidth}
+    \includegraphics[width=\colwidth]{motor_colour.png}
+    \caption{Motor speed and colour sensor}\label{fig:awesome_image1}
+    \endminipage\hfill
   }
   \\
   \hline
@@ -119,9 +153,11 @@
 	\cellcolor{blue!25}\large
 	\textbf{Say briefly what changes you will make to your plan for the next demo.}
 	\\ \hline
-	\vtop to 15mm{
+	\vtop to 25mm{
 	\begin{itemize}
-	    \item Remove firebase. Have to work with the server, website, and app, locally.
+	    \item Remove Google FireBase completely from project.
+	    \item Reverse motion.
+	    \item Offload computation to Raspberry pi with TCP connection.
 	    \item Spreading out more of group members when tackling tasks.
 	\end{itemize}
   }
